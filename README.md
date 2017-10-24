@@ -1,0 +1,2 @@
+# vue
+ThinkJS Vue Template
