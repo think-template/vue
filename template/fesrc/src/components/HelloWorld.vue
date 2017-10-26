@@ -1,53 +1,50 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+   <div id="app">
+   <header>
+    <div class="wrap">
+      <h1>A New App Created By ThinkJS</h1>
+    </div>
+  </header>
+  <div class="content">
+    <div class="list">
+      <div class="item">
+        <div class="step">1</div>
+        <h2>Generate Files</h2>
+        <p>Run <code>thinkjs</code> command to create module, controler, model, service and so on. </p>
+      </div>
+      <div class="item">
+        <div class="step">2</div>
+        <h2>Documentation</h2>
+        <p>ThinkJS has online html documents. visit <a href="https://thinkjs.org/doc.html">https://thinkjs.org/doc.html</a>.</p>
+      </div>
+      <div class="item">
+        <div class="step">3</div>
+        <h2>GitHub</h2>
+        <p>If you have some questions, please <a href="https://github.com/thinkjs/thinkjs/issues">new a issue</a>.</p>
+      </div>
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'HelloWorld'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+a, a:visited{color:#337ab7;text-decoration: none;}
+header{padding: 70px 0 70px 0;background-color: #4A6495}
+h1{font-size: 36px;color:#fff;font-weight: normal;}
+code{padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;border-radius: 4px;}
+.content{width: 1000px;margin: auto}
+.wrap{width: 1000px;margin: auto}
+.content{margin-top: 80px;}
+.list{width: 800px;}
+.list .item{position: relative;padding-left: 70px;margin-top: 50px;}
+.list .item .step{position: absolute;width: 36px;height: 36px;top:-3px;left:0;border: 5px solid #4A6495;border-radius: 23px;text-align: center;line-height: 36px;}
+.list .item h2{font-size: 24px;font-weight: normal;}
+.list .item p{line-height: 30px;margin-top: 10px}
 </style>

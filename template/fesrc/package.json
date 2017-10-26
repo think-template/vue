@@ -1,17 +1,16 @@
 {
-  "name": "vue-app",
+  "name": "fesrc",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "no body",
+  "author": "nobody",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "test": "npm run unit",
+    "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
     "vue": "^2.5.2"
@@ -33,6 +32,11 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-html": "^3.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^3.0.0",
@@ -58,10 +62,6 @@
     "inject-loader": "^3.0.0",
     "babel-plugin-istanbul": "^4.1.1",
     "phantomjs-prebuilt": "^2.1.14",
-    "chromedriver": "^2.27.2",
-    "cross-spawn": "^5.0.1",
-    "nightwatch": "^0.9.12",
-    "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "opn": "^5.1.0",
