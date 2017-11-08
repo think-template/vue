@@ -1,4 +1,4 @@
-const BaseRest = require('./rest.js');
+const BaseRest = require('<%= actionPrefix %>rest.js');
 
 module.exports = class extends BaseRest {
 

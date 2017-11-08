@@ -1,7 +1,10 @@
-const path = require('path');
 const assert = require('assert');
 
 module.exports = class extends think.Controller {
+  static get _REST() {
+    return true;
+  }
+
   constructor(ctx) {
     super(ctx);
     this.resource = this.getResource();
@@ -15,9 +18,7 @@ module.exports = class extends think.Controller {
    * @return {String} [resource name]
    */
   getResource() {
-    const filename = this.__filename || __filename;
-    const last = filename.lastIndexOf(path.sep);
-    return filename.substr(last + 1, filename.length - last - 4);
+    return this.ctx.controller;
   }
   getId() {
     const id = this.get('id');
@@ -33,8 +34,8 @@ module.exports = class extends think.Controller {
   async getAction() {
     let data;
     if (this.id) {
-      const pk = await this.modelInstance.pk;
-      data = await this.modelInstance.where({[pk]: this.id}).find();
+      const pk = this.modelInstance.pk;
+      data = await this.modelInstance.where({ [pk]: this.id }).find();
       return this.success(data);
     }
     data = await this.modelInstance.select();
@@ -45,14 +46,14 @@ module.exports = class extends think.Controller {
    * @return {Promise} []
    */
   async postAction() {
-    const pk = await this.modelInstance.pk;
+    const pk = this.modelInstance.pk;
     const data = this.post();
     delete data[pk];
     if (think.isEmpty(data)) {
       return this.fail('data is empty');
     }
     const insertId = await this.modelInstance.add(data);
-    return this.success({id: insertId});
+    return this.success({ id: insertId });
   }
   /**
    * delete resource
@@ -62,9 +63,9 @@ module.exports = class extends think.Controller {
     if (!this.id) {
       return this.fail('params error');
     }
-    const pk = await this.modelInstance.pk;
-    const rows = await this.modelInstance.where({[pk]: this.id}).delete();
-    return this.success({affectedRows: rows});
+    const pk = this.modelInstance.pk;
+    const rows = await this.modelInstance.where({ [pk]: this.id }).delete();
+    return this.success({ affectedRows: rows });
   }
   /**
    * update resource
@@ -74,16 +75,14 @@ module.exports = class extends think.Controller {
     if (!this.id) {
       return this.fail('params error');
     }
-    const pk = await this.modelInstance.pk;
+    const pk = this.modelInstance.pk;
     const data = this.post();
     delete data[pk];
     if (think.isEmpty(data)) {
       return this.fail('data is empty');
     }
-    const rows = await this.modelInstance.where({[pk]: this.id}).update(data);
-    return this.success({affectedRows: rows});
+    const rows = await this.modelInstance.where({ [pk]: this.id }).update(data);
+    return this.success({ affectedRows: rows });
   }
-  __call() {
-
-  }
+  __call() {}
 };
