@@ -1,0 +1,2 @@
+webpackJsonp([2],{15:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var c=t(16);t.n(c),t(0)},16:function(e,n){var t;document.body.appendChild((t=document.createElement("pre"),document.createElement("button"),t.innerHTML="首页内容1111",t))}},[15]);
+//# sourceMappingURL=index-41f0bd9cb3b1283a.js.map

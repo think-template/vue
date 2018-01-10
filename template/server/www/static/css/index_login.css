@@ -1,0 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font: inherit;
+  font-family: var(--font-family);
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+a{
+  text-decoration: none;
+  color: currentColor
+}
+
+a:active {
+  color: currentColor;
+}
+
+/**
+ * 控制元素状态的CSS，用于使用Javascript给元素添加或移除class，来控制元素状态
+ * @section State
+ * @example
+ * @code {CSS}
+ * .is-hidden   // 隐藏状态
+ *
+ */
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*
+ * 定位相关
+ */
+/* 视觉上垂直居中：偏上 */
+/* 水平居中，视觉上垂直居中 */
+/*
+ * 卡片
+ */
+/* 基本卡片 */
+/* 卡片：上浮跳动 */
+/* 卡片：小幅跳动 */
+/* 卡片：中幅跳动 */
+/* 卡片：大幅跳动 */
+/*
+ * 常用复杂布局
+ */
+.Login {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  border: 1px solid red;
+  position: relative;
+}
+.Login-content {
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    color: green;
+}
+/*# sourceMappingURL=index_login.css.map*/

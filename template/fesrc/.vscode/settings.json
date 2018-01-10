@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.disableLanguages": [
+    "html"
+  ]
+}
