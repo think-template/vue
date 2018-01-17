@@ -7,7 +7,7 @@
   "prettier.trailingComma": "none",
   "prettier.singleQuote": true,
   "prettier.semi": true,
-  "prettier.disableLanguages": [
-    "html"
-  ]
+  "[html]": {
+    "editor.formatOnSave": false,
+  }
 }
