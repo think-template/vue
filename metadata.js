@@ -41,7 +41,8 @@ module.exports = {
 			["server/prettierignore", "server/.prettierignore"],
 			["server/production.js", "server/production.js"],
 			["server/README.md", "server/README.md"],
-			["server/yarn.lock", "server/yarn.lock"]
+			["server/yarn.lock", "server/yarn.lock"],
+			["gitignore", ".gitignore"]
 		],
 		"multiModule": [
 			["server/.vscode", "server/.vscode"],
@@ -66,7 +67,8 @@ module.exports = {
 			["server/prettierignore", "server/.prettierignore"],
 			["server/production.js", "server/production.js"],
 			["server/README.md", "server/README.md"],
-			["server/yarn.lock", "server/yarn.lock"]
+			["server/yarn.lock", "server/yarn.lock"],
+			["gitignore", ".gitignore"]
 		]
 	},
 	"controller": {

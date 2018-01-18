@@ -4,27 +4,25 @@
   "version": "1.0.0",
   "author": "<%- author %>",
   "scripts": {
-    "start": "node development.js<% if (babel) { %>",
-    "test": "THINK_UNIT_TEST=1 nyc ava test/ && nyc report --reporter=html",
-    "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
+    "start": "node development.js",
+    "test": "cross-env THINK_UNIT_TEST=1 nyc ava test/ && nyc report --reporter=html<% if (babel) { %>",
+    "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/<% } %>",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/"
   },
   "dependencies": {
-    "inspector-proxy": "^1.1.0",
     "think-cache": "^1.0.0",
-    "think-cache-file": "^1.0.8",
-    "think-logger3": "^1.0.0",
-    "think-model": "^1.0.0",
-    "think-model-mysql": "^1.0.0",
     "think-session": "^1.0.0",
+    "think-cache-file": "^1.0.8",
+    "think-model": "^1.0.0",
     "think-session-file": "^1.0.5",
     "think-view": "^1.0.0",
     "think-view-nunjucks": "^1.0.1",
+    "think-model-mysql": "^1.0.0",
+    "think-logger3": "^1.0.0",
     "thinkjs": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.18.0",
     "<% if (babel) { %>babel-cli": "^6.24.1",
     "babel-preset-think-node": "^1.0.0",
     "node-notifier": "^5.0.2",
@@ -33,7 +31,10 @@
     "<% } %>think-watcher": "^3.0.0",
     "eslint": "^4.2.0",
     "eslint-config-think": "^1.0.0",
-    "nyc": "^7.0.0"
+    "ava": "^0.18.0",
+    "nyc": "^7.0.0",
+    "cross-env": "^5.1.3",
+    "inspector-proxy": "^1.1.0"
   },
   "repository": "",
   "license": "MIT",
