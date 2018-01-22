@@ -42,7 +42,18 @@ module.exports = {
 			["server/production.js", "server/production.js"],
 			["server/README.md", "server/README.md"],
 			["server/yarn.lock", "server/yarn.lock"],
-			["gitignore", ".gitignore"]
+			["gitignore", ".gitignore"],
+			// 前端代码
+			["fesrc/build", "fesrc/build"],
+			["fesrc/css", "fesrc/css"],
+			["fesrc/img", "fesrc/img"],
+			["fesrc/js", "fesrc/js"],
+			["fesrc/scripts", "fesrc/scripts"],
+			["fesrc/eslintrc.js", "fesrc/.eslintrc.js"],
+			["fesrc/stylelintrc.js", "fesrc/.stylelintrc.js"],
+			["fesrc/package.json", "fesrc/package.json"],
+			["fesrc/postcss.config.js", "fesrc/postcss.config.js"],
+			["fesrc/yarn.lock", "fesrc/yarn.lock"]
 		],
 		"multiModule": [
 			["server/.vscode", "server/.vscode"],
