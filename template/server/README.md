@@ -1,24 +1,22 @@
 Application created by [ThinkJS](http://www.thinkjs.org)
 
+## before
+
+`thinkjs migrate` add template info to package.json
+
 ## Install dependencies
 
-```
-yarn install
-```
+`yarn install`
 
 ## Start server
 
-```
-yarn start
-```
+`yarn start`
 
 ## Deploy with pm2
 
 Use pm2 to deploy app on production enviroment.
 
-```
-pm2 startOrReload pm2.json
-```
+`pm2 startOrReload pm2.json`
 
 ## Help
 
